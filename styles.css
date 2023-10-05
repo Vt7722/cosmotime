@@ -1,0 +1,60 @@
+body{
+    background-color: lightpink;
+}
+#connect{
+    margin-bottom: 0.5%;
+    height: 5pc;
+    width: 10.25pc;
+    font-size: medium;
+    background-color: #ff6392;
+}
+#disconnect{
+    margin-bottom: 0.5%;
+    height: 5pc;
+    width: 10.25pc;
+    font-size: medium;
+    background-color: #ffe45e;
+}
+#temperature{
+    margin-bottom: 0.5%;
+    height: 5pc;
+    width: 10.25pc;
+    font-size: medium;
+    background-color: #7fc8f8;
+}
+#humidity{
+    height: 5pc;
+    width: 10.25pc;
+    font-size: medium;
+    background-color: #5aa9e6;
+}
+#input-time{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10pc;
+}
+#input-date{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10pc;
+}
+#submitT{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.2pc;
+    margin-left: 10.5pc;
+    background-color: #caffbf;
+}
+#input-color{
+    margin-bottom: 0.5%;
+    margin-right: 0.25pc;
+    height: 2pc;
+    width: 10.2pc;
+    float: left;
+}
+#submitC{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.3pc;
+    background-color: #b8b8ff;
+}
