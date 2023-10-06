@@ -48,7 +48,7 @@ timeForm.addEventListener('submit', function(event) {
   ddd = new Date(inputDate.value)
   num = getLocalDay(ddd);
   time = inputTime.value.split(':', 2)
-  value1 = String('time '+'00 '+time +' '+ dd+' '+mm+' '+yy+' '+num)
+  value1 = String('time '+'00 '+time[0]+' '+time[1] +' '+ dd+' '+mm+' '+yy+' '+num)
   send(value1); // Отправить содержимое текстового поля
   inputTime.value = '';  // Обнулить текстовое поле
   //inputTime.focus();     // Вернуть фокус на текстовое поле
