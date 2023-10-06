@@ -1,9 +1,14 @@
 // Получение ссылок на элементы UI
 let connectButton = document.getElementById('connect');
 let disconnectButton = document.getElementById('disconnect');
+let temperatureButton = document.getElementById('temperature');
+let humidityButton = document.getElementById('humidity');
 let terminalContainer = document.getElementById('terminal');
-let sendForm = document.getElementById('send-form');
-let inputField = document.getElementById('input');
+let timeForm = document.getElementById('time-form');
+let colorForm = document.getElementById('color-form');
+let inputTime = document.getElementById('input-time');
+let inputDate = document.getElementById('input-date');
+let inputColor = document.getElementById('input-color');
 
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
@@ -15,12 +20,44 @@ disconnectButton.addEventListener('click', function() {
   disconnect();
 });
 
+temperatureButton.addEventListener('click', function() {
+  send("temperature"); // Отправить содержимое текстового поля
+});
+
+
+humidityButton.addEventListener('click', function() {
+  send("humidity"); // Отправить содержимое текстового поля
+});
+
+function getLocalDay(date) {
+  let day = date.getDay();
+  if (day == 0) { // день недели 0 (воскресенье) в европейской нумерации будет 7
+    day = 7;
+  }
+  return day;
+}
+
 // Обработка события отправки формы
-sendForm.addEventListener('submit', function(event) {
+timeForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
-  send(inputField.value); // Отправить содержимое текстового поля
-  inputField.value = '';  // Обнулить текстовое поле
-  inputField.focus();     // Вернуть фокус на текстовое поле
+  date = inputDate.value.split('-', 3)
+  dd = date[2]
+  mm = date[1]
+  yy = date[0].substring(date[0].length-2)
+  ddd = new Date(inputDate.value)
+  num = getLocalDay(ddd);
+  time = inputTime.value.split(':', 2)
+  value1 = String('time '+'00:'+inputTime.value +' '+ inputDate.value)
+  send(value1); // Отправить содержимое текстового поля
+  inputTime.value = '';  // Обнулить текстовое поле
+  //inputTime.focus();     // Вернуть фокус на текстовое поле
+});
+
+colorForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвратить отправку формы
+  send('color '+ hex2rgb(inputColor.value)); // Отправить содержимое текстового поля
+  inputColor.value = '';  // Обнулить текстовое поле
+  //inputColor.focus();     // Вернуть фокус на текстовое поле
 });
 
 // Кэш объекта выбранного устройства
@@ -31,6 +68,15 @@ let characteristicCache = null;
 
 // Промежуточный буфер для входящих данных
 let readBuffer = '';
+
+function hex2rgb(c) {
+  var bigint = parseInt(c.split('#')[1], 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
+
+  return r + ' ' + g + ' ' + b;
+}
 
 // Запустить выбор Bluetooth устройства и подключиться к выбранному
 function connect() {
