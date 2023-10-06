@@ -22,12 +22,12 @@ disconnectButton.addEventListener('click', function() {
 });
 
 temperatureButton.addEventListener('click', function() {
-  send("temperature;"); // Отправить содержимое текстового поля
+  send("0;"); // Отправить содержимое текстового поля
 });
 
 
 humidityButton.addEventListener('click', function() {
-  send("humidity;"); // Отправить содержимое текстового поля
+  send("1;"); // Отправить содержимое текстового поля
 });
 
 function getLocalDay(date) {
@@ -48,7 +48,7 @@ timeForm.addEventListener('submit', function(event) {
   ddd = new Date(inputDate.value)
   num = getLocalDay(ddd);
   time = inputTime.value.split(':', 2)
-  value1 = String('time '+'00 '+time[0]+' '+time[1] +' '+ dd+' '+mm+' '+yy+' '+num+';')
+  value1 = String('2,'+'00,'+time[0]+','+time[1] +','+ dd+','+mm+','+yy+','+num+';')
   send(value1); // Отправить содержимое текстового поля
   inputTime.value = '';  // Обнулить текстовое поле
   //inputTime.focus();     // Вернуть фокус на текстовое поле
@@ -76,7 +76,7 @@ function hex2rgb(c) {
   var g = (bigint >> 8) & 255;
   var b = bigint & 255;
 
-  return r + ' ' + g + ' ' + b;
+  return '3,'+ r + ',' + g + ',' + b+';';
 }
 
 // Запустить выбор Bluetooth устройства и подключиться к выбранному
