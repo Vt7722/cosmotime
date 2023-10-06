@@ -89,8 +89,7 @@ function connect() {
 
 // Запрос выбора Bluetooth устройства
 function requestBluetoothDevice() {
-  log('Requesting bluetooth device...');
-
+  
   return navigator.bluetooth.requestDevice({
     filters: [{services: [0xFFE0]}],
   }).
