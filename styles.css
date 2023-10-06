@@ -1,84 +1,11 @@
-body{
-    background-color: lightpink;
+#terminal div {
+    color: gray;
 }
-#connect{
-    margin-bottom: 0.5%;
-    height: 5pc;
-    width: 10.25pc;
-    font-size: medium;
-    background-color: #ff6392;
+
+#terminal div.out {
+    color: red;
 }
-#connect:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-}
-#disconnect{
-    margin-bottom: 0.5%;
-    height: 5pc;
-    width: 10.25pc;
-    font-size: medium;
-    background-color: #ffe45e;
-}
-#disconnect:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-}
-#temperature{
-    margin-bottom: 0.5%;
-    height: 5pc;
-    width: 10.25pc;
-    font-size: medium;
-    background-color: #7fc8f8;
-}
-#temperature:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-}
-#humidity{
-    height: 5pc;
-    width: 10.25pc;
-    font-size: medium;
-    background-color: #5aa9e6;
-}
-#humidity:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-}
-#input-time{
-    margin-bottom: 0.5%;
-    height: 2pc;
-    width: 10pc;
-}
-#input-date{
-    margin-bottom: 0.5%;
-    height: 2pc;
-    width: 10pc;
-}
-#submitT{
-    margin-bottom: 0.5%;
-    height: 2pc;
-    width: 10.2pc;
-    margin-left: 10.5pc;
-    background-color: #caffbf;
-}
-#submitT:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-}
-#input-color{
-    margin-bottom: 0.5%;
-    margin-right: 0.25pc;
-    height: 2pc;
-    width: 10.2pc;
-    float: left;
-}
-#submitC{
-    margin-bottom: 0.5%;
-    height: 2pc;
-    width: 10.3pc;
-    background-color: #b8b8ff;
-}
-#submitC:active{
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+
+#terminal div.in {
+    color: blue;
 }
