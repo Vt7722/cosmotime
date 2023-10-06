@@ -56,7 +56,7 @@ timeForm.addEventListener('submit', function(event) {
 
 colorForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
-  send('color '+ hex2rgb(inputColor.value)+';'); // Отправить содержимое текстового поля
+  send(hex2rgb(inputColor.value)+';'); // Отправить содержимое текстового поля
   inputColor.value = '';  // Обнулить текстовое поле
   //inputColor.focus();     // Вернуть фокус на текстовое поле
 });
