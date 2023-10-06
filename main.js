@@ -10,6 +10,7 @@ let inputTime = document.getElementById('input-time');
 let inputDate = document.getElementById('input-date');
 let inputColor = document.getElementById('input-color');
 
+
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -89,7 +90,8 @@ function connect() {
 
 // Запрос выбора Bluetooth устройства
 function requestBluetoothDevice() {
-  
+  //log('Requesting bluetooth device...');
+  log('Requesting bluetooth device...');
   return navigator.bluetooth.requestDevice({
     filters: [{services: [0xFFE0]}],
   }).
