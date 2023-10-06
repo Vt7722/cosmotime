@@ -44,7 +44,7 @@ timeForm.addEventListener('submit', function(event) {
   date = inputDate.value.split('-', 3)
   dd = date[2]
   mm = date[1]
-  yy = date[0].substring(date[0].length-2)
+  yy = date[0]
   ddd = new Date(inputDate.value)
   num = getLocalDay(ddd);
   time = inputTime.value.split(':', 2)
