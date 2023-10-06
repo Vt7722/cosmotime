@@ -22,12 +22,12 @@ disconnectButton.addEventListener('click', function() {
 });
 
 temperatureButton.addEventListener('click', function() {
-  send("temperature"); // Отправить содержимое текстового поля
+  send("temperature;"); // Отправить содержимое текстового поля
 });
 
 
 humidityButton.addEventListener('click', function() {
-  send("humidity"); // Отправить содержимое текстового поля
+  send("humidity;"); // Отправить содержимое текстового поля
 });
 
 function getLocalDay(date) {
@@ -48,7 +48,7 @@ timeForm.addEventListener('submit', function(event) {
   ddd = new Date(inputDate.value)
   num = getLocalDay(ddd);
   time = inputTime.value.split(':', 2)
-  value1 = String('time '+'00 '+time[0]+' '+time[1] +' '+ dd+' '+mm+' '+yy+' '+num)
+  value1 = String('time '+'00 '+time[0]+' '+time[1] +' '+ dd+' '+mm+' '+yy+' '+num+';')
   send(value1); // Отправить содержимое текстового поля
   inputTime.value = '';  // Обнулить текстовое поле
   //inputTime.focus();     // Вернуть фокус на текстовое поле
@@ -56,7 +56,7 @@ timeForm.addEventListener('submit', function(event) {
 
 colorForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
-  send('color '+ hex2rgb(inputColor.value)); // Отправить содержимое текстового поля
+  send('color '+ hex2rgb(inputColor.value)+';'); // Отправить содержимое текстового поля
   inputColor.value = '';  // Обнулить текстовое поле
   //inputColor.focus();     // Вернуть фокус на текстовое поле
 });
