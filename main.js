@@ -30,7 +30,7 @@ disconnectButton.addEventListener('click', function() {
 });
 
 temperatureButton.addEventListener('click', function() {
-  send("0;"); // Отправить содержимое текстового поля
+  send("8;"); // Отправить содержимое текстового поля
 });
 
 
