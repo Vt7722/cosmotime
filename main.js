@@ -9,6 +9,14 @@ let colorForm = document.getElementById('color-form');
 let inputTime = document.getElementById('input-time');
 let inputDate = document.getElementById('input-date');
 let inputColor = document.getElementById('input-color');
+let speedForm = document.getElementById('speed-form');
+let inputSpeed = document.getElementById('input1');
+let delayTimeForm = document.getElementById('delay-time-form');
+let inputDelayTime = document.getElementById('input2');
+let delayOtherForm = document.getElementById('delay-other-form');
+let inputDelayOther = document.getElementById('input3');
+let printTextForm = document.getElementById('print-text-form');
+let inputText = document.getElementById('input4');
 
 
 // Подключение к устройству при нажатии на кнопку Connect
@@ -60,6 +68,39 @@ colorForm.addEventListener('submit', function(event) {
   inputColor.value = '';  // Обнулить текстовое поле
   //inputColor.focus();     // Вернуть фокус на текстовое поле
 });
+
+//speed
+speedForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвратить отправку формы
+  send('4,'+inputSpeed.value+';');
+  inputSpeed.value = '';  // Обнулить текстовое поле
+  //inputColor.focus();     // Вернуть фокус на текстовое поле
+});
+
+//delay-time
+delayTimeForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвратить отправку формы
+  send('5,'+inputDelayTime.value+';'); // Отправить содержимое текстового поля
+  inputDelayTime.value = '';  // Обнулить текстовое поле
+  //inputColor.focus();     // Вернуть фокус на текстовое поле
+});
+
+//delay-other
+delayOtherForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвратить отправку формы
+  send('6,'+inputDelayOther.value+';'); // Отправить содержимое текстового поля
+  inputDelayOther.value = '';  // Обнулить текстовое поле
+  //inputColor.focus();     // Вернуть фокус на текстовое поле
+});
+
+//text
+printTextForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвратить отправку формы
+  send('7,'+inputDelayOther.value+';'); // Отправить содержимое текстового поля
+  inputDelayOther.value = '';  // Обнулить текстовое поле
+  //inputColor.focus();     // Вернуть фокус на текстовое поле
+});
+
 
 // Кэш объекта выбранного устройства
 let deviceCache = null;

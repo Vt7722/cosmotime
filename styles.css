@@ -1,6 +1,7 @@
 body{
     background-color: lightpink;
 }
+
 #connect{
     margin-bottom: 0.5%;
     height: 5pc;
@@ -81,4 +82,62 @@ body{
 #submitC:active{
     transform: scale(0.98); 
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+#input1{
+    margin-bottom: 0.5%;
+    height: 1.7pc;
+    width: 9.8pc;
+}
+#input2{
+    margin-bottom: 0.5%;
+    height: 1.7pc;
+    width: 9.8pc;
+}
+#input3{
+    margin-bottom: 0.5%;
+    height: 1.7pc;
+    width: 9.8pc;
+}
+#input4{
+    margin-bottom: 0.5%;
+    height: 1.7pc;
+    width: 9.8pc;
+}
+#submit1{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.3pc;
+    background-color: #ff6392;
+}
+#submit1:active{
+    transform: scale(0.98); 
+    
+}
+#submit2{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.3pc;
+    background-color: #ffe45e;
+}
+#submit2:active{
+    transform: scale(0.98); 
+    
+}#submit3{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.3pc;
+    background-color: #7fc8f8;
+}
+#submit3:active{
+    transform: scale(0.98); 
+    
+}#submit4{
+    margin-bottom: 0.5%;
+    height: 2pc;
+    width: 10.3pc;
+    background-color: #5aa9e6;
+}
+#submit4:active{
+    transform: scale(0.98); 
+    
 }
