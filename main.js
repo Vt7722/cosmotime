@@ -96,8 +96,8 @@ delayOtherForm.addEventListener('submit', function(event) {
 //text
 printTextForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
-  send('7,'+inputDelayOther.value+';'); // Отправить содержимое текстового поля
-  inputDelayOther.value = '';  // Обнулить текстовое поле
+  send('7,'+inputText.value+';'); // Отправить содержимое текстового поля
+  inputText.value = '';  // Обнулить текстовое поле
   //inputColor.focus();     // Вернуть фокус на текстовое поле
 });
 
