@@ -29,26 +29,27 @@ document.addEventListener('mousemove', function(e){
 });
 
 
-
-
-
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
+  cursor.focus();
 });
 
 // Отключение от устройства при нажатии на кнопку Disconnect
 disconnectButton.addEventListener('click', function() {
   disconnect();
+  cursor.focus();
 });
 
 temperatureButton.addEventListener('click', function() {
   send("0;"); // Отправить содержимое текстового поля
+  cursor.focus();
 });
 
 
 humidityButton.addEventListener('click', function() {
   send("1;"); // Отправить содержимое текстового поля
+  cursor.focus();
 });
 
 function getLocalDay(date) {
@@ -72,6 +73,8 @@ timeForm.addEventListener('submit', function(event) {
   value1 = String('2,'+'0,'+time[0]+','+time[1] +','+ dd+','+mm+','+yy+','+num+';')
   send(value1); // Отправить содержимое текстового поля
   inputTime.value = '';  // Обнулить текстовое поле
+  inputDate.value = '';
+  cursor.focus();
   //inputTime.focus();     // Вернуть фокус на текстовое поле
 });
 
@@ -79,7 +82,7 @@ colorForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
   send(hex2rgb(inputColor.value)); // Отправить содержимое текстового поля
   inputColor.value = '';  // Обнулить текстовое поле
-  //inputColor.focus();     // Вернуть фокус на текстовое поле
+  cursor.focus();    // Вернуть фокус на текстовое поле
 });
 
 //speed
@@ -87,7 +90,7 @@ speedForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
   send('4,'+inputSpeed.value+';');
   inputSpeed.value = '';  // Обнулить текстовое поле
-  //inputColor.focus();     // Вернуть фокус на текстовое поле
+  cursor.focus();   // Вернуть фокус на текстовое поле
 });
 
 //delay-time
@@ -95,7 +98,7 @@ delayTimeForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
   send('5,'+inputDelayTime.value+';'); // Отправить содержимое текстового поля
   inputDelayTime.value = '';  // Обнулить текстовое поле
-  //inputColor.focus();     // Вернуть фокус на текстовое поле
+  cursor.focus();     // Вернуть фокус на текстовое поле
 });
 
 //delay-other
@@ -103,7 +106,7 @@ delayOtherForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
   send('6,'+inputDelayOther.value+';'); // Отправить содержимое текстового поля
   inputDelayOther.value = '';  // Обнулить текстовое поле
-  //inputColor.focus();     // Вернуть фокус на текстовое поле
+  cursor.focus();    // Вернуть фокус на текстовое поле
 });
 
 //text
@@ -111,7 +114,7 @@ printTextForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
   send('7,'+inputText.value+';'); // Отправить содержимое текстового поля
   inputText.value = '';  // Обнулить текстовое поле
-  //inputColor.focus();     // Вернуть фокус на текстовое поле
+  cursor.focus();    // Вернуть фокус на текстовое поле
 });
 
 
