@@ -212,12 +212,12 @@ function handleCharacteristicValueChanged(event) {
   }
 }
 
-Обработка полученных данных
+//Обработка полученных данных
 function receive(data) {
   log(data, 'in');
 }
 
-Вывод в терминал
+//Вывод в терминал
 function log(data, type = '') {
   terminalContainer.insertAdjacentHTML('beforeend',
       '<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
