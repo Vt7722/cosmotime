@@ -65,7 +65,7 @@ body {
     color: #fff;
     transform: translateY(-7px);
 }
-.button1:focus {
+.button1:active {
     background-color: #fff;
     color: #000;
     transform: translateY(7px);
