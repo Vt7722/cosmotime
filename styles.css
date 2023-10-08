@@ -59,12 +59,25 @@ body {
     outline: none;
 }
 
-@media(hover: none){
+@media(hover: none) and (pointer: coarse) {
 .button1:hover {
     background-color: #2EE59D;
     color: #fff;
     transform: translateY(-7px);
 }
+.button1:focus {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(7px);
+}
+}
+
+@media(hover: hover) and (pointer: fine){
+    .button1:hover {
+        background-color: #2EE59D;
+        color: #fff;
+        transform: translateY(-7px);
+    }
 }
 
 input {
