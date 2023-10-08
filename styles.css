@@ -59,15 +59,10 @@ body {
 }
 
 @media(hover: none){
-.button1:hover {
+.button1:focus {
     background-color: #2EE59D;
     color: #fff;
     transform: translateY(-7px);
-}
-.button1:focus{
-    background-color: #fff;
-    color: #000;
-    transform: translateY(7px);
 }
 }
 
