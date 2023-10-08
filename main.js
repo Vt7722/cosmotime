@@ -19,16 +19,6 @@ let printTextForm = document.getElementById('print-text-form');
 let inputText = document.getElementById('input4');
 
 
-
-var cursor = document.querySelector('.blob');
-
-document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-});
-
-
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -291,3 +281,12 @@ function send(data) {
 function writeToCharacteristic(characteristic, data) {
   characteristic.writeValue(new TextEncoder().encode(data));
 }
+
+
+var cursor = document.querySelector('.blob');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
