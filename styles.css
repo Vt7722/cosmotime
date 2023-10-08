@@ -61,14 +61,14 @@ body {
 
 @media(hover: none) and (pointer: coarse) {
 .button1:hover {
-    background-color: #2EE59D;
-    color: #fff;
-    transform: translateY(-7px);
-}
-.button1:active {
     background-color: #fff;
     color: #000;
     transform: translateY(7px);
+}
+    .button1:active {
+    background-color: #2EE59D;
+    color: #fff;
+    transform: translateY(-7px);
 }
 }
 
