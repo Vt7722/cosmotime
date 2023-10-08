@@ -128,7 +128,7 @@ function connect() {
 // Запрос выбора Bluetooth устройства
 function requestBluetoothDevice() {
   //log('Requesting bluetooth device...');
-  // log('Requesting bluetooth device...');
+  log('Requesting bluetooth device...');
   return navigator.bluetooth.requestDevice({
     filters: [{services: [0xFFE0]}],
   }).
@@ -274,7 +274,7 @@ function send(data) {
   //   writeToCharacteristic(characteristicCache, data);
   // }
   writeToCharacteristic(characteristicCache, data);
-  // log(data, 'out');
+  log(data, 'out');
 }
 
 // Записать значение в характеристику
