@@ -47,7 +47,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     font-weight: 500;
     color: #000;
     background-color: #fff;
@@ -58,11 +58,12 @@ body {
     cursor: pointer;
     outline: none;
 }
-  
+@media(hover: none){
 .button1:hover {
     background-color: #2EE59D;
     color: #fff;
     transform: translateY(-7px);
+}
 }
 
 input {
@@ -73,7 +74,7 @@ input {
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     font-weight: 500;
     color: #000;
     background-color: #fff;
