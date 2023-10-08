@@ -58,12 +58,12 @@ body {
     cursor: pointer;
     outline: none;
 }
-@media(hover: none){
+
 .button1:hover {
     background-color: #2EE59D;
     color: #fff;
     transform: translateY(-7px);
-}
+
 }
 
 input {
