@@ -12,53 +12,55 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-
+<div class = "blob"></div>
+<div class = "content">
 <div id="condis">
-<button id="connect" type="button">Connect</button>
-<button id="disconnect" type="button">Disconnect</button>
+<button  class = "button1" id="connect" type="button">Connect</button>
+<button  class = "button1" id="disconnect" type="button">Disconnect</button>
 </div>
 <!--<div id="terminal"></div>-->
 <div id="th">
-<button id="temperature" type="button">Темпераутра</button>
-<button id="humidity" type="button">Влажность</button>
+<button class = "button1" id="temperature" type="button">Темпераутра</button>
+<button class = "button1" id="humidity" type="button">Влажность</button>
 </div>
 
 <form id="time-form">
     <input id="input-time" type="time">
     <input id="input-date" type="date">
     <br>
-    <button id="submitT" type="submit">Установить время</button>
+    <button class = "button1" id="submitT" type="submit">Установить время</button>
 </form>
 
 <form id="color-form">
     <input id="input-color" type="color">
-    <button id="submitC" type="submit">Установить цвет</button>
+    <button  class = "button1" id="submitC" type="submit">Установить цвет</button>
 </form>
 
 <form id="speed-form">
-    <input id="input1" placeholder = "speed ms">
-    <button id="submit1" type="submit">Установить скорость</button>
+    <input id="input1"  placeholder="скорость ms">
+    <button class = "button1" id="submit1" type="submit">Установить скорость</button>
 </form>
 
 <form id="delay-time-form">
-    <input id="input2" placeholder = "delay time ms">
-    <button id="submit2" type="submit">Установить задержку</button>
+    <input id="input2"  placeholder="задержка времени ms">
+    <button class = "button1" id="submit2" type="submit">Установить задержку</button>
 </form>
 
 <form id="delay-other-form">
-    <input id="input3" placeholder = "delay oth ms">
-    <button id="submit3" type="submit">Установить задержку</button>
+    <input id="input3"  placeholder="задержка темп/вл ms">
+    <button class = "button1" id="submit3" type="submit">Установить задержку</button>
 </form>
 
-<form id="print-text-form" >
+<form id="print-text-form">
     <input id="input4">
-    <button id="submit4" type="submit">Отправить текст</button>
+    <button class = "button1" id="submit4" type="submit">Отправить текст</button>
 </form>
-
+<!--
 <div id="terminal">
     <div>Подключение к устройству...</div>
 </div>
-
+-->
+</div>
 <script src="main.js"></script>
 <script src="companion.js" data-service-worker="sw.js"></script>
 
