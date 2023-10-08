@@ -46,7 +46,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     font-weight: 500;
     color: #000;
     background-color: #fff;
@@ -71,7 +71,7 @@ input {
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     font-weight: 500;
     color: #000;
     background-color: #fff;
