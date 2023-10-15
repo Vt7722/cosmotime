@@ -1,6 +1,6 @@
 {
     "name": "Cosmotime",
-    "short_name": "time",
+    "short_name": "Cosmotime",
     "description": "Web clock settings",
     "start_url": "/",
     "scope": "/",
@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "/icon.png",
+            "src": "/icon512.png",
             "sizes": "512x512"
         }
     ]
