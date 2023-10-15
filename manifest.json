@@ -1,6 +1,6 @@
 {
     "name": "Cosmotime",
-    "short_name": "Cosmotime",
+    "short_name": "time",
     "description": "Web clock settings",
     "start_url": "/",
     "scope": "/",
