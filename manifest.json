@@ -5,12 +5,12 @@
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
-    "theme_color": "#00A3CC",
-    "background_color": "#00A3CC",
+    "theme_color": "#00416a",
+    "background_color": "#00416a",
     "orientation": "portrait",
     "icons": [
         {
-            "src": "https://www.clipartmax.com/png/middle/95-954125_alarm-clock-icon-white.png",
+            "src": "https://cdn-icons-png.flaticon.com/512/143/143353.png",
             "sizes": "512x512"
         }
     ]
