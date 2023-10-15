@@ -187,7 +187,7 @@ function startNotifications(characteristic) {
   return characteristic.startNotifications().
       then(() => {
         log('Notifications started');
-        alert("Ok");
+        alert("The device is successfully connected");
         characteristic.addEventListener('characteristicvaluechanged',
             handleCharacteristicValueChanged);
       });
@@ -233,9 +233,12 @@ function disconnect() {
     if (deviceCache.gatt.connected) {
       deviceCache.gatt.disconnect();
       log('"' + deviceCache.name + '" bluetooth device disconnected');
+      alert('"' + deviceCache.name + '" bluetooth device disconnected');
     }
     else {
       log('"' + deviceCache.name +
+          '" bluetooth device is already disconnected');
+      alert('"' + deviceCache.name +
           '" bluetooth device is already disconnected');
     }
   }
