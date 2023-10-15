@@ -122,7 +122,6 @@ function connect() {
       requestBluetoothDevice()).
       then(device => connectDeviceAndCacheCharacteristic(device)).
       then(characteristic => startNotifications(characteristic)).
-      then(alert("Подключение выполнено успешно")).
       catch(error => log(error));
 }
 
@@ -177,7 +176,6 @@ function connectDeviceAndCacheCharacteristic(device) {
       then(characteristic => {
         log('Characteristic found');
         characteristicCache = characteristic;
-
         return characteristicCache;
       });
 }
@@ -189,6 +187,7 @@ function startNotifications(characteristic) {
   return characteristic.startNotifications().
       then(() => {
         log('Notifications started');
+        alert("Ok");
         characteristic.addEventListener('characteristicvaluechanged',
             handleCharacteristicValueChanged);
       });
