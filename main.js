@@ -122,6 +122,7 @@ function connect() {
       requestBluetoothDevice()).
       then(device => connectDeviceAndCacheCharacteristic(device)).
       then(characteristic => startNotifications(characteristic)).
+      then(alert("Подключение выполнено успешно")).
       catch(error => log(error));
 }
 
