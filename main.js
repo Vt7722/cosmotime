@@ -53,10 +53,10 @@ inputBrightness,addEventListener('change', function(){
 //   send('10,'+selectEffect.value+';');
 // })
 selectCycle.addEventListener('change', function(){
-  send('9,'+selectCycle.value+','+inputBrightness.value+';');
+  send('9,'+selectCycle.value+';');
 })
 selectEffect.addEventListener('change', function(){
-  send('10,'+selectEffect.value+','+inputBrightness.value+';');
+  send('10,'+selectEffect.value+';');
 })
 function getLocalDay(date) {
   let day = date.getDay();
