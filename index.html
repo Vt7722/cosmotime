@@ -19,14 +19,33 @@
 <button class = "button1" id="temperature" type="button">Temperature</button>
 <button class = "button1" id="humidity" type="button">Humidity</button>
 </div>
-
+<form id="brignthess-form">
+    <input class = "input-brightness" id="input-brightness" type="range" min="10" max="200" step="1" value="200">
+</form>
 <form id="time-form">
     <input id="input-time" placeholder="time" type="time">
     <input id="input-date" placeholder="date" type="date">
     <br>
     <button class = "button1" id="submitT" type="submit">Set time</button>
 </form>
-
+<form id="select-form">
+    <select id="select-cycle">
+        <option class="option" id="1" value="1">Бегущая строка</option>
+        <option id="2" value="2">Дыхание</option>
+        <option id="3" value="3">Радуга-строка</option>
+        <option id="4" value="4">Радуга-дыхание</option>
+        <option id="11" value="11">Все подряд</option>
+    </select>
+    <select id="select-effect">
+        <option id="5" value="5">Rainbow</option>
+        <option id="6" value="6">Rainbow cycle</option>
+        <option id="7" value="7">Twinkle</option>
+        <option id="8" value="8">Rainbow twinkle</option>
+        <option id="9" value="9">Rainbow 1</option>
+        <option id="10" value="10">Rainbow 2</option>
+        <option id="12" value="12">Все подряд</option>
+    </select>
+</form>
 <form id="color-form">
     <input id="input-color" type="color">
     <button  class = "button1" id="submitC" type="submit">Set color</button>
@@ -51,8 +70,11 @@
     <input id="input4">
     <button class = "button1" id="submit4" type="submit">Send text</button>
 </form>
-
-    <div id="terminal">
+<!--Выбор основного цикла программы либо подряд select-->
+<!--Выбор эффекта либо подряд select-->
+<!--Яркость range-->
+<!--Вывод картинок??-->
+<div id="terminal">
     <div>Подключение к устройству...</div>
 </div>
 </div>

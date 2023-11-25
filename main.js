@@ -17,7 +17,10 @@ let delayOtherForm = document.getElementById('delay-other-form');
 let inputDelayOther = document.getElementById('input3');
 let printTextForm = document.getElementById('print-text-form');
 let inputText = document.getElementById('input4');
-
+let brightnessForm = document.getElementById('brignthess-form');
+let inputBrightness = document.getElementById('input-brightness');
+let selectCycle = document.getElementById("select-cycle");
+let selectEffect = document.getElementById("select-effect");
 
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
@@ -38,6 +41,15 @@ humidityButton.addEventListener('click', function() {
   send("1;"); 
 });
 
+inputBrightness,addEventListener('change', function(){
+  send('11,'+inputBrightness.value+';');
+});
+selectCycle.addEventListener('change', function(){
+  send('9,'+selectCycle.value+';');
+})
+selectEffect.addEventListener('change', function(){
+  send('10,'+selectEffect.value+';');
+})
 function getLocalDay(date) {
   let day = date.getDay();
   if (day == 0) { // день недели 0 (воскресенье) в европейской нумерации будет 7
