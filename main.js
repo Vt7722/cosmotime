@@ -43,7 +43,7 @@ humidityButton.addEventListener('click', function() {
   send("1;"); 
 });
 
-inputBrightness,addEventListener('change', function(){
+inputBrightness,addEventListener('keypress', function(){
   send('11,'+inputBrightness.value+';');
 });
 // cycleForm.addEventListener('change', function(){
@@ -274,13 +274,13 @@ function disconnect() {
 
 // Отправить данные подключенному устройству
 function send(data) {
-  data = String(data);
+  // data = String(data);
 
-  if (!data || !characteristicCache) {
-    return;
-  }
+  // if (!data || !characteristicCache) {
+  //   return;
+  // }
 
-  data += '\n';
+  // data += '\n';
 
   // if (data.length > 20) {
   //   let chunks = data.match(/(.|[\r\n]){1,20}/g);
