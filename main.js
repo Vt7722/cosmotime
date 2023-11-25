@@ -17,7 +17,7 @@ let delayOtherForm = document.getElementById('delay-other-form');
 let inputDelayOther = document.getElementById('input3');
 let printTextForm = document.getElementById('print-text-form');
 let inputText = document.getElementById('input4');
-// let brightnessForm = document.getElementById('brignthess-form');
+let brightnessForm = document.getElementById('brignthess-form');
 let inputBrightness = document.getElementById('input-brightness');
 // let cycleForm = document.getElementById("cycle-form");
 // let effectForm = document.getElementById("effect-form");
@@ -43,7 +43,7 @@ humidityButton.addEventListener('click', function() {
   send("1;"); 
 });
 
-inputBrightness,addEventListener('change', function(){
+inputBrightness.addEventListener('change', function(){
   send('11,'+inputBrightness.value+';');
 });
 // cycleForm.addEventListener('change', function(){
@@ -52,6 +52,7 @@ inputBrightness,addEventListener('change', function(){
 // effectForm.addEventListener('change', function(){
 //   send('10,'+selectEffect.value+';');
 // })
+
 selectCycle.addEventListener('change', function(){
   send('9,'+selectCycle.value+';');
 })
