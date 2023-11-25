@@ -19,10 +19,10 @@ let printTextForm = document.getElementById('print-text-form');
 let inputText = document.getElementById('input4');
 let brightnessForm = document.getElementById('brignthess-form');
 let inputBrightness = document.getElementById('input-brightness');
-let cycleForm = document.getElementById("cycle-form");
-let effectForm = document.getElementById("effect-form");
-// let selectCycle = document.getElementById("select-cycle");
-// let selectEffect = document.getElementById("select-effect");
+// let cycleForm = document.getElementById("cycle-form");
+// let effectForm = document.getElementById("effect-form");
+let selectCycle = document.getElementById("select-cycle");
+let selectEffect = document.getElementById("select-effect");
 
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
