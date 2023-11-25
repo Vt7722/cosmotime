@@ -43,7 +43,7 @@ humidityButton.addEventListener('click', function() {
   send("1;"); 
 });
 
-inputBrightness,addEventListener('click', function(){
+inputBrightness,addEventListener('change', function(){
   send('11,'+inputBrightness.value+';');
 });
 // cycleForm.addEventListener('change', function(){
@@ -52,10 +52,10 @@ inputBrightness,addEventListener('click', function(){
 // effectForm.addEventListener('change', function(){
 //   send('10,'+selectEffect.value+';');
 // })
-selectCycle.addEventListener('click', function(){
+selectCycle.addEventListener('change', function(){
   send('9,'+selectCycle.value+';');
 })
-selectEffect.addEventListener('click', function(){
+selectEffect.addEventListener('change', function(){
   send('10,'+selectEffect.value+';');
 })
 function getLocalDay(date) {
