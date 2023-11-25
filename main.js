@@ -44,7 +44,7 @@ humidityButton.addEventListener('click', function() {
 });
 
 inputBrightness,addEventListener('change', function(){
-  send('20,'+'2,'+inputBrightness.value+';');
+  send('20,'+inputBrightness.value+';');
 });
 // cycleForm.addEventListener('change', function(){
 //   send('9,'+selectCycle.value+';');
